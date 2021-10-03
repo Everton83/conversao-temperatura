@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: epinheiro/conversaotemperatura:v1
+          image: epinheiro/conversaotemperatura:latest
           ports:
             - containerPort: 8080
 
@@ -32,4 +32,4 @@ spec:
     - port: 80
       targetPort: 8080 # Porta do container web
       nodePort: 30000 # Porta do serviço
-  type: NodePort
+  type: LoadBalancer
